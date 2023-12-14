@@ -94,7 +94,7 @@
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_TOG>,
+                <&rgb_ug RGB_TOG>;
 
             label = "SYMBLAYERCOLOR";
         };
@@ -111,7 +111,7 @@
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_TOG>,
+                <&rgb_ug RGB_TOG>;
 
             label = "MOVELAYERCOLOR";
         };
