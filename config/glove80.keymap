@@ -87,13 +87,14 @@
             bindings =
                 <&macro_press>,
                 <&mo 1>,
+                <&rgb_ug RGB_TOG>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(123,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(177,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
+                <&rgb_ug RGB_TOG>,
 
             label = "SYMBLAYERCOLOR";
         };
@@ -103,13 +104,14 @@
             bindings =
                 <&macro_press>,
                 <&mo 3>,
+                <&rgb_ug RGB_TOG>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(222,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(300,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
+                <&rgb_ug RGB_TOG>,
 
             label = "MOVELAYERCOLOR";
         };
