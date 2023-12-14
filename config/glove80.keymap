@@ -81,21 +81,37 @@
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
 
-        layercolor: layercolor {
+        symblayercolor: symblayercolor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(123,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
 
-            label = "LAYERCOLOR";
+            label = "SYMBLAYERCOLOR";
+        };
+        movelayercolor: movelayercolor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(222,100,50)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
+
+            label = "MOVELAYERCOLOR";
         };
     };
 
@@ -119,10 +135,10 @@
                     &kp ESC   &bhm LCTRL A &bhm LALT S &bhm LGUI D &bhm LSHIFT F   &kp G                                                                         &kp H   &bhm RSHFT J  &bhm RGUI K  &bhm RALT L &bhm RCTRL SEMI &kp SQT
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |     `     |    Z    |    X    |    C     |    V     |    B     |   LSHFT   |   CMD     |   LAYER 1 |     |   LCTRL   |   CMD     |   RSHFT   |    N     |     M     |     ,     |    .     |     /     |   PGUP   |  
-                   &kp GRAVE    &kp Z     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &layercolor       &layercolor  &kp TAB    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
+                   &kp GRAVE    &kp Z     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &symblayercolor       &symblayercolor  &kp TAB    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |   MAGIC   |   HOME  |   END   |   LEFT   |   RIGHT  |          |   BSPC    |   DEL     |   LALT    |     |   ESC     |   RET     |   SPACE   |          |    UP     |   DOWN    |    [     |     ]     |   PGDN   |  
-                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &kp LALT           &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
+                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &movelayercolor           &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             >;
         };
@@ -143,10 +159,10 @@
                     &kp ESC     &kp DOUBLE_QUOTES  &kp LEFT_BRACE     &kp LEFT_BRACKET      &kp LEFT_PARENTHESIS      &kp DOT                                    &kp PRCNT  &kp KP_PLUS   &kp SQT   &kp FSLH     &kp DLLR    &kp SQT
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |     `     |    '    |    }    |    ]     |    )     |    B     |   LSHFT   |   CMD     |   LAYER 1 |     |   LCTRL   |   CMD     |   RSHFT   |    -     |     M     |     ,     |    .     |     /     |   PGUP   |  
-                   &kp GRAVE    &kp SQT     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &layercolor       &kp LCTRL  &kp RGUI    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
+                   &kp GRAVE    &kp SQT     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &symblayercolor   &symblayercolor  &kp RGUI    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |   MAGIC   |   HOME  |   END   |   LEFT   |   RIGHT  |          |   BSPC    |   DEL     |   LALT    |     |   ESC     |   RET     |   SPACE   |          |    UP     |   DOWN    |    [     |     ]     |   PGDN   |  
-                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &kp LALT           &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
+                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &movelayercolor    &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             >;
         };
@@ -179,10 +195,10 @@
                     &kp ESC   &bhm LCTRL A &bhm LALT S &bhm LGUI D &bhm LSHIFT F   &kp G                                                                           &kp H       &kp J       &kp K       &kp L      &kp SEMI   &kp SQT
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |     `     |    Z    |    X    |    C     |    V     |    B     |   LSHFT   |   CMD     |   LAYER 1 |     |   LCTRL   |   CMD     |   RSHFT   |    N     |     M     |     ,     |    .     |     /     |   PGUP   |  
-                   &kp GRAVE    &kp Z     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &layercolor       &layercolor  &kp TAB    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
+                   &kp GRAVE    &kp Z     &kp X      &kp C     &kp V      &kp B     &kp LSHFT  &kp LGUI     &symblayercolor       &symblayercolor  &kp TAB    &kp RSHFT     &kp N       &kp M     &kp COMMA    &kp DOT   &kp FSLH    &kp PG_UP
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //   |   MAGIC   |   HOME  |   END   |   LEFT   |   RIGHT  |          |   BSPC    |   DEL     |   LALT    |     |   ESC     |   RET     |   SPACE   |          |    UP     |   DOWN    |    [     |     ]     |   PGDN   |  
-                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &kp LALT           &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
+                   &mo MAGIC   &kp HOME  &kp END   &kp LEFT   &kp RIGHT              &kp BSPC    &kp DEL    &movelayercolor           &kp ESC     &kp RET    &kp SPACE                &kp UP     &kp DOWN   &kp LBKT   &kp RBKT    &kp PG_DN
             // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             >;
         };
