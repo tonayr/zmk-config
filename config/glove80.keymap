@@ -41,12 +41,13 @@
         compatible = "zmk,combos";
 
         symblr {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <42 41>;
             bindings = <&symblayercolor>;
         };
 
         symbll {
+            timeout-ms = <150>;
             bindings = <&symblayercolor>;
             key-positions = <37 38>;
         };
