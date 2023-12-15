@@ -37,12 +37,18 @@
         };
     };
 
-     combos {
+       combos {
         compatible = "zmk,combos";
-        combo_cmdtab{
+
+        symblr {
             timeout-ms = <50>;
-            key-positions = <53 40>;
-            bindings = <&cmdtab>;
+            key-positions = <42 41>;
+            bindings = <&symblayercolor>;
+        };
+
+        symbll {
+            bindings = <&symblayercolor>;
+            key-positions = <37 38>;
         };
     };
 
